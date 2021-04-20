@@ -4,6 +4,6 @@
     Private fixed As New Cfixedpoint
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Label1.Text = fixed.generatefixedpoint()
-        ' MsgBox(signed.binarytodeanary(Label1.Text))
+        MsgBox(fixed.binarytodeanary(Label1.Text))
     End Sub
 End Class
