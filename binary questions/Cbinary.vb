@@ -18,5 +18,19 @@
         Next
         Return binarystring
     End Function
+    Function generatefixedpoint()
+        Dim pointinstring As Integer = returnrandomnumber(1, 6)
+        Dim binarynum As String
+        Dim properbinarystring As String = ""
+        binarynum = generatebinary()
+        For i = 0 To pointinstring
+            properbinarystring = properbinarystring & binarynum(i)
 
+        Next
+        properbinarystring = properbinarystring & "·"
+        For i = pointinstring + 1 To binarynum.Length - 1
+            properbinarystring = properbinarystring & binarynum(pointinstring)
+        Next
+        Return properbinarystring
+    End Function
 End Class
