@@ -4,39 +4,50 @@
     Public Overrides Function binarytodeanary(bin As String) As Object
         Dim wholenumberstring As String
         Dim totalnumber As Double
+        Dim isnegative As Boolean = False
         Dim binarypoint As Integer
         Dim factorsnumberstring As String = ""
         For i = 0 To bin.Length - 1
             If bin(i) = "·" Then
-                binarypoint = i
+                binarypoint = i - 1
             End If
         Next
 
+        If bin(0) = "1" Then
+            isnegative = True
+            wholenumberstring = "0"
+            For i = 1 To bin.Length - 1
 
-        For i = 0 To 8 - binarypoint - 1
-            wholenumberstring = wholenumberstring & "0"
+                wholenumberstring = wholenumberstring & bin(i)
 
-        Next
-        For i = 0 To binarypoint - 1
+            Next
+            bin = wholenumberstring
+            wholenumberstring = ""
+        End If
+        MsgBox(bin)
+
+        For i = 0 To binarypoint
             wholenumberstring = wholenumberstring & bin(i)
         Next
 
 
-        For i = binarypoint + 1 To 8
+        For i = binarypoint + 2 To bin.Length - 1
             factorsnumberstring = factorsnumberstring & bin(i)
             ' MsgBox(factorsnumberstring)
         Next
-        For i = factorsnumberstring.Length To 7
-            factorsnumberstring = factorsnumberstring & "0"
-        Next
 
+        MsgBox(wholenumberstring)
         totalnumber += converter.BinaryToDeanary(wholenumberstring)
-
+        MsgBox(totalnumber)
         For i = 0 To factorsnumberstring.Length - 1
             If factorsnumberstring(i) = "1" Then
-                totalnumber += 0.5 ^ i + 1
+                totalnumber += 0.5 ^ (i + 1)
             End If
         Next
+        If isnegative = True Then
+            totalnumber -= 2 ^ binarypoint
+
+        End If
         Return totalnumber
     End Function
 End Class

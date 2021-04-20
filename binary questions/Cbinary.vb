@@ -37,6 +37,11 @@
     Function generatefloatingpoint()
         Dim exponent As String = generatebinary(4)
         Dim mantissa As String = generatebinary(8)
+        Dim fullthing As String = ""
+        fullthing = mantissa & exponent
+        Return fullthing
+
+
 
     End Function
 End Class
