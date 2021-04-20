@@ -18,31 +18,7 @@
         Next x
         Return dec 
     End Function
-    Overrides Function deanarytobinary(dec As Double)
-        Dim filler As String = ""
-        Dim bin As Integer
-        Dim output As String
-        While dec <> 0
-            If dec Mod 2 = 0 Then
-                bin = 0
-            Else
-                bin = 1
-            End If
-            dec = dec \ 2
-            output = Convert.ToString(bin) & output
-        End While
-        If output Is Nothing Then
-            Return "0"
-        Else
-            If Len(output) <> 8 Then
-                For i = Len(output) To 7
-                    filler = filler & "0"
-                Next
-                output = filler & output
-            End If
-            Return output
-        End If
-    End Function
+
 End Class
 
 

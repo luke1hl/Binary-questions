@@ -7,7 +7,6 @@
 
     End Function
     Public MustOverride Function binarytodeanary(bin As String)
-    Public MustOverride Function deanarytobinary(dec As Double)
 
 
     Function generatebinary()

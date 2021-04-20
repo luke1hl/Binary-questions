@@ -2,6 +2,8 @@
     Inherits Cbinary
     Private converter As New Cunsigned
     Private holder As String
+    Private holdertwo As String
+    Private hold As Double
     Overrides Function binarytodeanary(bin As String)
         If bin(0) = "1" Then
             holder = "0"
@@ -14,7 +16,5 @@
             Return converter.BinaryToDeanary(bin)
         End If
     End Function
-    Public Overrides Function deanarytobinary(dec As Double)
 
-    End Function
 End Class
