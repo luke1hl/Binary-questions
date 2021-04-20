@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="Cbinary.vb" />
     <Compile Include="Cfixedpoint.vb" />
+    <Compile Include="Cfloatingpoint.vb" />
     <Compile Include="Csigned.vb" />
     <Compile Include="Cunsigned.vb" />
     <Compile Include="Form1.vb">

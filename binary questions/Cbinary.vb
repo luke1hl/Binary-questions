@@ -9,9 +9,9 @@
     Public MustOverride Function binarytodeanary(bin As String)
 
 
-    Function generatebinary()
+    Function generatebinary(length As Integer)
         Dim binarystring As String = ""
-        For i = 0 To 7
+        For i = 0 To length - 1
             Dim oneorzero As Integer = returnrandomnumber(1, 1000)
             binarystring = binarystring & oneorzero Mod 2
 
@@ -22,7 +22,7 @@
         Dim pointinstring As Integer = returnrandomnumber(1, 6)
         Dim binarynum As String
         Dim properbinarystring As String = ""
-        binarynum = generatebinary()
+        binarynum = generatebinary(8)
         For i = 0 To pointinstring
             properbinarystring = properbinarystring & binarynum(i)
 
@@ -32,5 +32,11 @@
             properbinarystring = properbinarystring & binarynum(pointinstring)
         Next
         Return properbinarystring
+    End Function
+
+    Function generatefloatingpoint()
+        Dim exponent As String = generatebinary(4)
+        Dim mantissa As String = generatebinary(8)
+
     End Function
 End Class
