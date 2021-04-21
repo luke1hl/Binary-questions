@@ -28,6 +28,8 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.confirm = New System.Windows.Forms.Button()
+        Me.correct = New System.Windows.Forms.Label()
+        Me.incorrect = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -91,12 +93,36 @@ Partial Class Form1
         Me.confirm.Text = "confirm answer"
         Me.confirm.UseVisualStyleBackColor = False
         '
+        'correct
+        '
+        Me.correct.AutoSize = True
+        Me.correct.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.correct.ForeColor = System.Drawing.Color.White
+        Me.correct.Location = New System.Drawing.Point(30, 40)
+        Me.correct.Name = "correct"
+        Me.correct.Size = New System.Drawing.Size(16, 17)
+        Me.correct.TabIndex = 6
+        Me.correct.Text = "0"
+        '
+        'incorrect
+        '
+        Me.incorrect.AutoSize = True
+        Me.incorrect.BackColor = System.Drawing.Color.Red
+        Me.incorrect.ForeColor = System.Drawing.Color.White
+        Me.incorrect.Location = New System.Drawing.Point(52, 40)
+        Me.incorrect.Name = "incorrect"
+        Me.incorrect.Size = New System.Drawing.Size(16, 17)
+        Me.incorrect.TabIndex = 7
+        Me.incorrect.Text = "0"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.Controls.Add(Me.incorrect)
+        Me.Controls.Add(Me.correct)
         Me.Controls.Add(Me.confirm)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
@@ -117,4 +143,6 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents confirm As Button
+    Friend WithEvents correct As Label
+    Friend WithEvents incorrect As Label
 End Class

@@ -16,8 +16,8 @@
         For i = 8 To bin.Length - 1
             exponent &= bin(i)
         Next
-        MsgBox(exponent)
-        MsgBox(mantissa)
+        ' MsgBox(exponent)
+        'MsgBox(mantissa)
         If exponent(0) = "1" Then
             holder = "0"
             For i = 1 To 3
