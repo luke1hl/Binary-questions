@@ -24,7 +24,7 @@
             bin = wholenumberstring
             wholenumberstring = ""
         End If
-        MsgBox(bin)
+        ' MsgBox(bin)
 
         For i = 0 To binarypoint
             wholenumberstring = wholenumberstring & bin(i)
@@ -36,9 +36,9 @@
             ' MsgBox(factorsnumberstring)
         Next
 
-        MsgBox(wholenumberstring)
+        ' MsgBox(wholenumberstring)
         totalnumber += converter.BinaryToDeanary(wholenumberstring)
-        MsgBox(totalnumber)
+        ' MsgBox(totalnumber)
         For i = 0 To factorsnumberstring.Length - 1
             If factorsnumberstring(i) = "1" Then
                 totalnumber += 0.5 ^ (i + 1)

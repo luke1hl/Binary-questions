@@ -32,23 +32,43 @@
 
                 End If
             Case 2 'signed
-                binary = unsigned.generatebinary(8)
-                deanary = unsigned.BinaryToDeanary(binary)
+                binary = signed.generatebinary(8)
+                deanary = signed.binarytodeanary(binary)
                 If binorden = 1 Then
                     answer = binary
-                    Label1.Text = "using unsigned binary convert " & deanary & " to binary"
+                    Label1.Text = "using twos complement convert " & deanary & " to binary"
 
                 Else
                     answer = deanary
-                    Label1.Text = "using unsigned binary convert " & binary & " to deanary"
+                    Label1.Text = "using twos complement convert " & binary & " to deanary"
 
                 End If
 
             Case 3 'fixed point
+                binary = fixed.generatefixedpoint()
+                deanary = fixed.binarytodeanary(binary)
+                If binorden = 1 Then
+                    answer = binary
+                    Label1.Text = "using fixed point convert " & deanary & " to binary"
 
+                Else
+                    answer = deanary
+                    Label1.Text = "using signed binary convert " & binary & " to deanary"
+
+                End If
 
             Case 4 'floatingpoint
+                binary = floating.generatefloatingpoint()
+                deanary = floating.binarytodeanary(binary)
+                If binorden = 1 Then
+                    answer = binary
+                    Label1.Text = "using floating point binary convert " & deanary & " to binary"
 
+                Else
+                    answer = deanary
+                    Label1.Text = "using floating point binary convert " & binary & " to deanary"
+
+                End If
 
         End Select
 
