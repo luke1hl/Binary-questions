@@ -35,6 +35,6 @@
 
         Next
         mantissainteger = fixed.binarytodeanary(holder)
-        Return mantissainteger & " " & "* 2 ^" & exponentinteger
+        Return mantissainteger & "*2^" & exponentinteger
     End Function
 End Class
