@@ -24,6 +24,10 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.answerbox = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.confirm = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -34,11 +38,12 @@ Partial Class Form1
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(402, 109)
         Me.Label1.TabIndex = 0
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(429, 185)
+        Me.Button1.Location = New System.Drawing.Point(866, 40)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(189, 106)
@@ -46,21 +51,70 @@ Partial Class Form1
         Me.Button1.Text = "New Question"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'answerbox
+        '
+        Me.answerbox.Location = New System.Drawing.Point(272, 242)
+        Me.answerbox.Multiline = True
+        Me.answerbox.Name = "answerbox"
+        Me.answerbox.Size = New System.Drawing.Size(495, 77)
+        Me.answerbox.TabIndex = 2
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(653, 371)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 66)
+        Me.Button2.TabIndex = 3
+        Me.Button2.Text = "·"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button3.Location = New System.Drawing.Point(308, 371)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 66)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "*2^"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'confirm
+        '
+        Me.confirm.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.confirm.Location = New System.Drawing.Point(423, 331)
+        Me.confirm.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.confirm.Name = "confirm"
+        Me.confirm.Size = New System.Drawing.Size(189, 106)
+        Me.confirm.TabIndex = 5
+        Me.confirm.Text = "confirm answer"
+        Me.confirm.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.Controls.Add(Me.confirm)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.answerbox)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents answerbox As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents confirm As Button
 End Class
