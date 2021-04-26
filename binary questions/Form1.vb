@@ -86,10 +86,10 @@
 
     Private Sub confirm_Click(sender As Object, e As EventArgs) Handles confirm.Click
         If answerbox.Text = answer Then
-            MsgBox("well done you got it correct")
+            Label1.Text = "well done you got it correct"
             correct.Text += 1
         Else
-            MsgBox("unlucky, the correct answer is " & answer)
+            Label1.Text = "unlucky, the correct answer is " & answer
             incorrect.Text += 1
 
         End If
